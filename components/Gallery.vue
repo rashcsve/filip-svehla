@@ -1,5 +1,5 @@
 <template>
-  <div class="flex md:h-gallery overflow-hidden">
+  <div id="gallery" class="flex">
     <transition-group name="fade" tag="div" class="w-full">
       <div v-for="i in [index]" :key="i" class="flex h-full">
         <div
@@ -179,9 +179,10 @@ export default {
       this.index = index
     },
     handleScroll(e) {
-      if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-        this.onScroll = false
-      } else if (window.scrollY !== 0) {
+      // if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+      //   this.onScroll = false
+      // } else
+      if (window.scrollY !== 0) {
         this.onScroll = true
       } else {
         this.onScroll = false
