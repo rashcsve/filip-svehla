@@ -11,6 +11,7 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
+    "@egjs/vue-flicking": "^3.5.2",
     "core-js": "^3.8.3",
     "nuxt": "^2.14.12"
   },

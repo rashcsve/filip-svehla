@@ -1,7 +1,17 @@
 <template>
-  <div>Paintings</div>
+  <div>
+    <Navbar paintings />
+    <Gallery />
+  </div>
 </template>
 
 <script>
-export default {}
+import Navbar from '../components/Navbar'
+import Gallery from '../components/Gallery'
+export default {
+  components: {
+    Navbar,
+    Gallery,
+  },
+}
 </script>

@@ -1,5 +1,7 @@
 <template>
-  <div class="bg-gray-600 w-full py-8 px-16 flex justify-between items-center">
+  <div
+    class="bg-gray-600 h-navbar w-full py-8 px-16 flex justify-between items-center"
+  >
     <h1>
       <nuxt-link to="/" class="font-bold text-2xl">Filip Švehla</nuxt-link>
     </h1>
