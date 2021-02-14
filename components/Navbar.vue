@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-gray-600 h-navbar w-full py-8 px-16 flex justify-between items-center"
+    class="bg-gray-600 h-navbar w-full py-6 px-16 flex justify-between items-center"
   >
     <h1>
       <nuxt-link to="/" class="font-bold text-2xl">Filip Švehla</nuxt-link>

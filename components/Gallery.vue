@@ -179,13 +179,13 @@ export default {
       this.index = index
     },
     handleScroll(e) {
-      console.log(window.scrollY)
-      if (window.scrollY !== 0) {
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+        this.onScroll = false
+      } else if (window.scrollY !== 0) {
         this.onScroll = true
       } else {
         this.onScroll = false
       }
-      console.log(this.onScroll)
     },
   },
 }

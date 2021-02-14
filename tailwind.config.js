@@ -8,8 +8,8 @@ module.exports = {
         layout: '45% 10% 45%',
       },
       height: {
-        navbar: '100px',
-        gallery: 'calc(100vh - 100px)',
+        navbar: '80px',
+        gallery: 'calc(100vh - 80px)',
       },
     },
   },
