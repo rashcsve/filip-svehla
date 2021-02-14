@@ -31,7 +31,23 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    'nuxt-gsap-module',
   ],
+
+  gsap: {
+    extraPlugins: {
+      text: true,
+      /**
+       * When you enable them, plugins are
+       * automatically registered and available globally
+       */
+      scrollTo: true,
+      scrollTrigger: true,
+    },
+    extraEases: {
+      expoScaleEase: true,
+    },
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [],
