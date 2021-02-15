@@ -8,6 +8,7 @@ module.exports = {
         layout: '45% 10% 45%',
       },
       height: {
+        leftTopTile: '60px',
         navbar: '80px',
         gallery: 'calc(100vh - 80px)',
       },

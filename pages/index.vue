@@ -3,7 +3,9 @@
     <div
       class="md:grid md:grid-cols-2 md:grid-rows-layout overflow-hidden w-full md:h-screen relative"
     >
-      <div class="bg-red-500 overflow-hidden w-full box-slide-left-top"></div>
+      <div class="bg-red-500 overflow-hidden w-full box-slide-left-top">
+        <div class="w-full bg-white h-leftTopTile"></div>
+      </div>
       <div
         class="bg-green-500 col-start-2 col-end-2 row-start-1 row-end-3 w-full overflow-hidden box-slide-right-top"
       >
@@ -34,6 +36,36 @@ export default {
     NavbarTop,
     NavbarBottom,
   },
+  transition: {
+    name: 'slide',
+    mode: 'out-in',
+    css: false,
+    beforeEnter(el) {
+      this.$gsap.set(el, {
+        scale: 1,
+        opacity: 0,
+        top: '-100%',
+      })
+    },
+    enter(el, done) {
+      this.$gsap.to(el, {
+        opacity: 1,
+        top: 0,
+        duration: 1,
+        ease: 'power2.inOut',
+        onComplete: done,
+      })
+    },
+    leave(el, done) {
+      this.$gsap.to(el, {
+        opacity: 0,
+        top: '100%',
+        duration: 1,
+        ease: 'power2.inOut',
+        onComplete: done,
+      })
+    },
+  },
   mounted() {
     this.animate()
   },
@@ -44,18 +76,18 @@ export default {
         //   this.restart(true)
         // },
       })
-      tl.from('.box-slide-left-top', 0.5, { opacity: 0, x: -window.innerWidth })
-      tl.from('.box-slide-right-top', 0.5, {
+      tl.from('.box-slide-left-top', 0.3, { opacity: 0, x: -window.innerWidth })
+      tl.from('.box-slide-right-top', 0.3, {
         opacity: 0,
         y: -window.innerHeight,
       })
-      tl.from('.box-slide-right-bottom', 0.5, {
+      tl.from('.box-slide-right-bottom', 0.3, {
         opacity: 0,
         x: window.innerWidth,
       })
       tl.from(
         '.box-slide-left-bottom',
-        0.5,
+        0.3,
         {
           opacity: 0,
           y: window.innerHeight,
