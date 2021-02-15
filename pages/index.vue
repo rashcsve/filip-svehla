@@ -4,17 +4,17 @@
       class="md:grid md:grid-cols-2 md:grid-rows-layout overflow-hidden w-full md:h-screen relative"
     >
       <div class="bg-red-500 overflow-hidden w-full box-slide-left-top">
-        <div class="w-full bg-white h-leftTopTile"></div>
+        <div class="w-full bg-white h-leftTopTile tile"></div>
       </div>
       <div
         class="bg-green-500 col-start-2 col-end-2 row-start-1 row-end-3 w-full overflow-hidden box-slide-right-top"
       >
-        <navbar-top />
+        <navbar-top class="navbar-top" />
       </div>
       <div
         class="bg-blue-500 row-start-2 row-end-4 w-full overflow-hidden flex box-slide-left-bottom"
       >
-        <navbar-bottom />
+        <navbar-bottom class="navbar-bottom" />
       </div>
       <div
         class="bg-yellow-500 col-start-2 col-end-2 row-start-3 row-end-4 w-full overflow-hidden box-slide-right-bottom"
@@ -105,5 +105,26 @@ export default {
   transform: translate(-47%, -50%);
   top: 50%;
   left: 51%;
+}
+.box-slide-left-top {
+  background-color: #6fe45ad6;
+}
+.box-slide-left-top .tile {
+  background-color: #ff1d1d;
+}
+.box-slide-right-top {
+  background-color: #ffee24;
+}
+.navbar-top {
+  background-color: #97b031;
+}
+.box-slide-right-bottom {
+  background-color: #ff5818;
+}
+.box-slide-left-bottom {
+  background-color: #ffee24;
+}
+.navbar-bottom {
+  background-color: #ffafdb;
 }
 </style>
