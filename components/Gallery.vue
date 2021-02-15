@@ -1,10 +1,10 @@
 <template>
-  <div id="gallery" class="flex">
+  <div id="gallery" class="flex flex-grow">
     <transition-group name="fade" tag="div" class="w-full">
       <div v-for="i in [index]" :key="i" class="flex h-full">
         <div
           class="w-full px-16 py-12 overflow-y-scroll"
-          :class="currentCollection.color"
+          :class="`text-${currentCollection.color}`"
         >
           <div class="flex justify-between items-center">
             <p class="italic">{{ currentCollection.year }}</p>
@@ -60,7 +60,7 @@
           <div
             v-for="(col, ind) in otherCollection"
             :key="ind"
-            :class="col.color"
+            :class="`bg-${col.color}`"
           >
             <div
               class="next flex flex-col justify-between items-center md:h-full"
@@ -97,7 +97,7 @@ export default {
           title: 'Stripes',
           year: '2020',
           flag: 'Paintings',
-          color: 'bg-orange-600',
+          color: 'red-600',
           images: [
             {
               src: 'paintings/stripes_1',
@@ -122,7 +122,7 @@ export default {
           title: 'GRID',
           year: '2020',
           flag: 'Paintings',
-          color: 'bg-blue-600',
+          color: 'blue-600',
           images: [
             {
               src: 'paintings/stripes_1',
@@ -142,7 +142,7 @@ export default {
           title: 'sosi',
           year: '2020',
           flag: 'Paintings',
-          color: 'bg-white',
+          color: 'orange-500',
           images: [
             {
               src: 'paintings/stripes_1',

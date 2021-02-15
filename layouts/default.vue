@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <Nuxt />
+  <div class="min-h-screen">
+    <Nuxt class="min-h-screen" />
     <Footer />
   </div>
 </template>
