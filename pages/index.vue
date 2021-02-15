@@ -19,7 +19,7 @@
       <div
         class="bg-yellow-500 col-start-2 col-end-2 row-start-3 row-end-4 w-full overflow-hidden box-slide-right-bottom"
       ></div>
-      <h1 class="absolute text-4xl title">
+      <h1 class="absolute text-5xl title">
         czech artist
         <div></div>
       </h1>
@@ -106,7 +106,7 @@ export default {
   top: 50%;
   left: 51%;
 }
-.box-slide-left-top {
+/* .box-slide-left-top {
   background-color: #6fe45ad6;
 }
 .box-slide-left-top .tile {
@@ -126,5 +126,26 @@ export default {
 }
 .navbar-bottom {
   background-color: #ffafdb;
+} */
+.box-slide-left-top {
+  background-color: #fd4330;
+}
+.box-slide-left-top .tile {
+  background-color: #fca9e6;
+}
+.box-slide-right-top {
+  background-color: #6dada485;
+}
+.navbar-top {
+  background-color: red;
+}
+.box-slide-right-bottom {
+  background-color: red;
+}
+.box-slide-left-bottom {
+  background-color: #ffc800;
+}
+.navbar-bottom {
+  background-color: red;
 }
 </style>
