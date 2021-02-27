@@ -19,7 +19,7 @@
       <div
         class="bg-yellow-500 col-start-2 col-end-2 row-start-3 row-end-4 w-full overflow-hidden box-slide-right-bottom"
       ></div>
-      <h1 class="absolute text-5xl title">
+      <h1 class="absolute text-5xl title font-light italic">
         czech artist
         <div></div>
       </h1>
@@ -94,7 +94,7 @@ export default {
         },
         'end'
       )
-      tl.to('.title', { duration: 1, text: 'Filip Švehla' }, 'end')
+      tl.to('.title', { duration: 1, text: 'Filip Švehla&nbsp;&nbsp;' }, 'end')
     },
   },
 }
@@ -106,7 +106,7 @@ export default {
   top: 50%;
   left: 51%;
 }
-/* .box-slide-left-top {
+.box-slide-left-top {
   background-color: #6fe45ad6;
 }
 .box-slide-left-top .tile {
@@ -126,8 +126,8 @@ export default {
 }
 .navbar-bottom {
   background-color: #ffafdb;
-} */
-.box-slide-left-top {
+}
+/* .box-slide-left-top {
   background-color: #fd4330;
 }
 .box-slide-left-top .tile {
@@ -147,5 +147,5 @@ export default {
 }
 .navbar-bottom {
   background-color: red;
-}
+} */
 </style>
