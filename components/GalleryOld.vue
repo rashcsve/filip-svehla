@@ -1,52 +1,97 @@
 <template>
-  <div id="gallery" class="flex flex-grow h-full w-full">
-    <div
-      v-for="(item, ind) in data"
-      :key="ind"
-      class="flex top-0 right-0 relative md:h-screen"
-      :class="{
-        'w-full': ind === index,
-        'md:h-screen sticky': ind !== index && onScroll,
-        'md:h-gallery': ind !== index && !onScroll,
-      }"
-    >
-      <transition name="fade">
-        <Collection
-          v-if="ind === index"
-          :current-collection="currentCollection"
-        />
-      </transition>
-      <div
-        v-if="ind !== index"
-        class="next flex flex-col justify-between items-center md:h-full"
-        :class="`bg-${item.color}`"
-        @click="next(item.index)"
-      >
-        <div class="flex flex-col text-xs italic items-center mt-8 lowercase">
-          <p>{{ item.year }}</p>
-          <p>{{ item.flag }}</p>
+  <div id="gallery" class="flex flex-grow">
+    <transition-group name="fade" tag="div" class="w-full">
+      <div v-for="i in [index]" :key="i" class="flex h-full">
+        <div
+          class="w-full px-16 py-12 overflow-y-scroll"
+          :class="`text-${currentCollection.color}`"
+        >
+          <div class="flex justify-between items-center">
+            <p class="italic">{{ currentCollection.year }}</p>
+            <p class="text-2xl uppercase">{{ currentCollection.title }}</p>
+            <p class="lowercase italic">{{ currentCollection.flag }}</p>
+          </div>
+          <div
+            v-for="(img, ind) in currentCollection.images"
+            :key="ind"
+            class="pt-8 pb-16"
+            :class="{
+              flex: img.align == 'left' || img.align == 'right',
+              'flex-row-reverse': img.align == 'right',
+              'justify-center': img.align == 'center',
+            }"
+          >
+            <img
+              :src="require(`~/assets/images/${img.src}.png`)"
+              :alt="img.info"
+              :class="{
+                'w-2/3': img.align == 'left' || img.align == 'right',
+              }"
+            />
+            <div
+              :class="{
+                flex: img.align == 'left' || img.align == 'right',
+              }"
+            >
+              <p
+                v-if="img.title"
+                class="mt-4"
+                :class="{
+                  'px-4': img.align == 'left' || img.align == 'right',
+                  'text-right': img.align == 'right',
+                }"
+              >
+                {{ img.title }}
+              </p>
+              <p
+                :class="{
+                  'px-4': img.align == 'left' || img.align == 'right',
+                  'text-right': img.align == 'right',
+                }"
+                v-html="img.info"
+              ></p>
+            </div>
+          </div>
         </div>
-        <p class="uppercase text-2xl transform -rotate-90 mb-12">
-          {{ item.title }}
-        </p>
+        <aside
+          class="flex top-0 right-0 relative md:h-screen"
+          :class="{ 'md:h-screen sticky': onScroll, 'md:h-gallery': !onScroll }"
+        >
+          <div
+            v-for="(col, ind) in otherCollection"
+            :key="ind"
+            :class="`bg-${col.color}`"
+          >
+            <div
+              class="next flex flex-col justify-between items-center md:h-full"
+              @click="next(col.index)"
+            >
+              <div
+                class="flex flex-col text-xs italic items-center mt-8 lowercase"
+              >
+                <p>{{ col.year }}</p>
+                <p>{{ col.flag }}</p>
+              </div>
+              <p class="uppercase text-2xl transform -rotate-90 mb-12">
+                {{ col.title }}
+              </p>
+            </div>
+          </div>
+        </aside>
       </div>
-    </div>
+    </transition-group>
   </div>
 </template>
 
 <script>
-import Collection from './Collection'
 /* eslint-disable no-console */
 
 export default {
-  components: {
-    Collection,
-  },
   data() {
     return {
       onScroll: false,
       index: 0,
-      data: [
+      collection: [
         {
           index: 0,
           title: 'Stripes',
@@ -117,10 +162,10 @@ export default {
   },
   computed: {
     currentCollection() {
-      return this.data[Math.abs(this.index) % this.data.length]
+      return this.collection[Math.abs(this.index) % this.collection.length]
     },
     otherCollection() {
-      return this.data.filter((col) => col.index !== this.index)
+      return this.collection.filter((col) => col.index !== this.index)
     },
   },
   mounted() {
@@ -163,28 +208,16 @@ export default {
   width: 100%;
   opacity: 0;
 }
-.slide-enter-active {
-  transition: all 0.3s ease;
-}
-.slide-enter {
-  /* transform: translateX(100%, 0); */
-}
-.slide-leave-to {
-  /* transform: translateX(-100%, 0); */
-}
-
 .next {
   cursor: pointer;
   width: 80px;
   padding: 8px;
-  transition: all 0.7s ease;
+  transition: 0.7s ease;
+  border-radius: 0 4px 4px 0;
   text-decoration: none;
   user-select: none;
 }
 .next:hover {
   background-color: rgba(0, 0, 0, 0.2);
-}
-.card {
-  transition: all 200ms ease-in-out 50ms;
 }
 </style>
