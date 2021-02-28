@@ -20,6 +20,7 @@
     >
       <div class="sm:w-image" :class="{ 'mx-auto': img.align == 'center' }">
         <img
+          v-lazy-load
           :src="require(`~/assets/images/${img.src}.jpg`)"
           :alt="img.info"
           :class="{
