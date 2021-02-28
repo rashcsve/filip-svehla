@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar paintings />
-    <Gallery />
+    <Gallery are-paintings />
   </div>
 </template>
 

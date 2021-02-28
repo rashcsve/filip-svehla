@@ -1,0 +1,161 @@
+const paintings = [
+  {
+    index: 0,
+    title: 'Stripes',
+    year: '2020-2021',
+    color: 'gray-500',
+    flag: 'Paintings',
+    images: [
+      {
+        src: 'paintings/stripes/first',
+        align: 'left',
+        title: 'No Title I',
+        size: '80x60 cm',
+        material: 'Oil on Canvas',
+      },
+      {
+        src: 'paintings/stripes/second',
+        align: 'left',
+        title: 'No Title II',
+        size: '80x60 cm',
+        material: 'Oil on Canvas',
+      },
+      {
+        src: 'paintings/stripes/third',
+        align: 'left',
+        title: 'No Title',
+        size: '80x60 cm',
+        material: 'Oil on Canvas',
+      },
+      {
+        src: 'paintings/stripes/fourth',
+        align: 'left',
+        title: 'Mumbai',
+        size: '80x60 cm',
+        material: 'Oil on Canvas',
+      },
+    ],
+  },
+
+  {
+    index: 1,
+    title: 'paintings',
+    year: '2020',
+    color: 'gray-400',
+    flag: 'Paintings',
+    images: [
+      {
+        src: 'paintings/2020/first',
+        align: 'center',
+        title: 'No Title',
+        size: '46x55 cm',
+        material: 'Oil on Canvas',
+      },
+      {
+        src: 'paintings/2020/second',
+        align: 'center',
+        title: 'No Title',
+        size: '146x195 cm',
+        material: 'Oil on Canvas',
+      },
+      {
+        src: 'paintings/2020/dandy',
+        align: 'center',
+        title: 'Dandy',
+        size: '165x205 cm',
+        material: 'Oil on Canvas',
+      },
+      {
+        src: 'paintings/2020/weakling',
+        align: 'center',
+        title: 'Weakling',
+        size: '165x205 cm',
+        material: 'Oil on Canvas',
+      },
+    ],
+  },
+  {
+    index: 2,
+    title: 'paintings',
+    year: '2019',
+    color: 'yellow-900',
+    flag: 'Paintings',
+    images: [
+      {
+        src: 'paintings/2019/first',
+        align: 'center',
+        title: 'No Title I',
+        size: '150x145 cm',
+        material: 'Oil on Canvas',
+      },
+      {
+        src: 'paintings/2019/second',
+        align: 'right',
+        title: 'No Title II',
+        size: '150x145 cm',
+        material: 'Oil on Canvas',
+      },
+      {
+        src: 'paintings/2019/third',
+        align: 'left',
+        title: 'No Title III',
+        size: '150x145 cm',
+        material: 'Acrillic on Canvas',
+      },
+      {
+        src: 'paintings/2019/fourth',
+        align: 'right',
+        title: 'No Title',
+        size: 'Variable size',
+        material: 'Acrillic on Canvas',
+      },
+      {
+        src: 'paintings/2019/fifth',
+        align: 'right',
+        title: 'No Title',
+        size: '285x195 cm',
+        material: 'Syntatic Email on Canvas',
+      },
+    ],
+  },
+
+  {
+    index: 3,
+    title: 'paintings',
+    year: '2018',
+    color: 'gray-200',
+    flag: 'Paintings',
+    images: [
+      {
+        src: 'paintings/2018/first',
+        align: 'right',
+        title: 'No Title I',
+        size: '22x18 cm',
+        material: 'Oil on Canvas',
+      },
+      {
+        src: 'paintings/2018/second',
+        align: 'right',
+        title: 'No Title I',
+        size: '25x20 cm',
+        material: 'Oil on Canvas',
+      },
+      {
+        src: 'paintings/2018/third',
+        align: 'right',
+        title: 'No Title',
+        size: '22x18 cm',
+        material: 'Oil on Canvas',
+      },
+      {
+        src: 'paintings/2018/fourth',
+        align: 'right',
+        title: 'No Title',
+        size: '25x20 cm',
+        material: 'Oil on Canvas',
+      },
+    ],
+  },
+]
+
+export { paintings }

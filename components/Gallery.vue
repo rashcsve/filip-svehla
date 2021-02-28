@@ -18,7 +18,7 @@
       </transition>
       <div
         v-if="ind !== index"
-        class="next flex flex-col justify-between items-center md:h-full"
+        class="next rounded-b-3xl flex flex-col justify-between items-center md:h-full"
         :class="`bg-${item.color}`"
         @click="next(item.index, item.color)"
       >
@@ -26,15 +26,18 @@
           <p>{{ item.year }}</p>
           <p>{{ item.flag }}</p>
         </div>
-        <p class="uppercase text-2xl transform -rotate-90 mb-12">
-          {{ item.title }}
-        </p>
+        <p
+          class="uppercase text-2xl transform -rotate-90 mb-12"
+          v-html="item.title"
+        ></p>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { paintings } from '../static/paintings'
+import { installations } from '../static/installations'
 import Collection from './Collection'
 /* eslint-disable no-console */
 
@@ -42,77 +45,17 @@ export default {
   components: {
     Collection,
   },
+  props: {
+    arePaintings: {
+      type: Boolean,
+      default: false,
+    },
+  },
   data() {
     return {
       onScroll: false,
       index: 0,
-      data: [
-        {
-          index: 0,
-          title: 'Stripes',
-          year: '2020',
-          flag: 'Paintings',
-          color: 'red-500',
-          images: [
-            {
-              src: 'paintings/stripes_1',
-              align: 'center',
-              title: 'Proužkyyyy',
-              info: '2020<br>Acrylic on Canvas<br>160 x 120 cm',
-            },
-            {
-              src: 'paintings/stripes_2',
-              align: 'right',
-              info: '2020<br>Acrylic on Canvas<br>160 x 120 cm',
-            },
-            {
-              src: 'paintings/stripes_3',
-              align: 'left',
-              info: '2020<br>Acrylic on Canvas<br>160 x 120 cm',
-            },
-          ],
-        },
-        {
-          index: 1,
-          title: 'GRID',
-          year: '2020',
-          flag: 'Paintings',
-          color: 'blue-500',
-          images: [
-            {
-              src: 'paintings/stripes_1',
-              align: 'center',
-              title: 'Grid grid',
-              info: '2020<br>Acrylic on Canvas<br>160 x 120 cm',
-            },
-            {
-              src: 'paintings/stripes_2',
-              align: 'right',
-              info: '2020<br>Acrylic on Canvas<br>160 x 120 cm',
-            },
-          ],
-        },
-        {
-          index: 2,
-          title: 'sosi',
-          year: '2020',
-          flag: 'Paintings',
-          color: 'yellow-600',
-          images: [
-            {
-              src: 'paintings/stripes_1',
-              align: 'center',
-              title: 'SOSIII',
-              info: '2020<br>Acrylic on Canvas<br>160 x 120 cm',
-            },
-            {
-              src: 'paintings/stripes_1',
-              align: 'left',
-              info: '2020<br>Acrylic on Canvas<br>160 x 120 cm',
-            },
-          ],
-        },
-      ],
+      data: null,
     }
   },
   computed: {
@@ -125,6 +68,11 @@ export default {
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll)
+    if (this.arePaintings) {
+      this.data = paintings
+    } else {
+      this.data = installations
+    }
     this.$store.commit('setColor', this.currentCollection.color)
   },
   destroyed() {

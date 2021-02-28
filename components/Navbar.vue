@@ -1,6 +1,6 @@
 <template>
   <div
-    class="h-navbar w-full py-6 text-white px-16 flex justify-between items-center"
+    class="h-navbar w-full py-6 text-white px-16 flex justify-between items-center rounded-l-3xl"
     :class="`bg-${color}`"
   >
     <h1>

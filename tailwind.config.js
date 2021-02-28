@@ -11,8 +11,11 @@ module.exports = {
         leftTopTile: '60px',
         navbar: '80px',
         gallery: 'calc(100vh - 80px)',
-        tile: '100px'
+        tile: '100px',
       },
+      width: {
+        image: '32rem',
+      }
     },
   },
 }
