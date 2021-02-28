@@ -10,15 +10,16 @@
         'md:h-gallery': ind !== index && !onScroll,
       }"
     >
-      <transition name="fade">
+      <transition name="show">
         <Collection
           v-if="ind === index"
           :current-collection="currentCollection"
+          class="coll"
         />
       </transition>
       <div
         v-if="ind !== index"
-        class="next rounded-b-3xl flex flex-col justify-between items-center md:h-full"
+        class="next card rounded-b-3xl flex flex-col justify-between items-center md:h-full"
         :class="`bg-${item.color}`"
         @click="next(item.index, item.color)"
       >
@@ -83,6 +84,26 @@ export default {
       this.index = index
       this.$store.commit('setColor', color)
     },
+    enter(el, done) {
+      const tl = this.$gsap.timeline({ onComplete: done })
+      tl.set(el, {
+        x: window.innerWidth * 1.5,
+      })
+      tl.to(el, 0.7, {
+        x: 0,
+        ease: 'power2.easeOut',
+      })
+    },
+    leave(el, done) {
+      const tl = this.$gsap.timeline()
+      tl.fromTo(
+        el,
+        1,
+        { autoAlpha: 1 },
+        { autoAlpha: 0, ease: 'power2.easeOut', onComplete: done }
+      )
+    },
+
     handleScroll(e) {
       // if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
       //   this.onScroll = false
@@ -113,16 +134,25 @@ export default {
   width: 100%;
   opacity: 0;
 }
-.slide-enter-active {
-  transition: all 0.3s ease;
+.slide-enter-active,
+.slide-leave-active {
+  transition: 1s ease;
 }
 .slide-enter {
-  /* transform: translateX(100%, 0); */
+  transform: translateX(100%, 0);
 }
 .slide-leave-to {
-  /* transform: translateX(-100%, 0); */
+  transform: translateX(-100%, 0);
 }
-
+.show-enter-to,
+.show-leave {
+  transform: translateX(0);
+  transition: all 0.5s ease-in;
+}
+.show-enter,
+.show-leave-to {
+  transform: translateX(50%);
+}
 .next {
   cursor: pointer;
   width: 80px;
