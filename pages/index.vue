@@ -17,9 +17,9 @@
         <navbar-bottom class="navbar-bottom" />
       </div>
       <div
-        class="bg-yellow-500 col-start-2 col-end-2 row-start-3 row-end-4 w-full overflow-hidden box-slide-right-bottom"
+        class="bg-yellow-500 col-start-2 col-end-2 row-start-3 row-end-4 flex w-full overflow-hidden box-slide-right-bottom"
       ></div>
-      <h1 class="absolute text-5xl title font-light italic">
+      <h1 class="absolute text-5xl title">
         czech artist
         <div></div>
       </h1>
@@ -100,7 +100,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .title {
   transform: translate(-47%, -50%);
   top: 50%;
