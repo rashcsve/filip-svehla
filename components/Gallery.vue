@@ -20,7 +20,7 @@
         v-if="ind !== index"
         class="next flex flex-col justify-between items-center md:h-full"
         :class="`bg-${item.color}`"
-        @click="next(item.index)"
+        @click="next(item.index, item.color)"
       >
         <div class="flex flex-col text-xs italic items-center mt-8 lowercase">
           <p>{{ item.year }}</p>
@@ -52,7 +52,7 @@ export default {
           title: 'Stripes',
           year: '2020',
           flag: 'Paintings',
-          color: 'red-600',
+          color: 'red-500',
           images: [
             {
               src: 'paintings/stripes_1',
@@ -77,7 +77,7 @@ export default {
           title: 'GRID',
           year: '2020',
           flag: 'Paintings',
-          color: 'blue-600',
+          color: 'blue-500',
           images: [
             {
               src: 'paintings/stripes_1',
@@ -97,7 +97,7 @@ export default {
           title: 'sosi',
           year: '2020',
           flag: 'Paintings',
-          color: 'orange-500',
+          color: 'yellow-600',
           images: [
             {
               src: 'paintings/stripes_1',
@@ -125,13 +125,15 @@ export default {
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll)
+    this.$store.commit('setColor', this.currentCollection.color)
   },
   destroyed() {
     window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
-    next(index) {
+    next(index, color) {
       this.index = index
+      this.$store.commit('setColor', color)
     },
     handleScroll(e) {
       // if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
