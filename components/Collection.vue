@@ -8,6 +8,14 @@
       <p class="italic">{{ currentCollection.year }}</p>
       <!-- <p class="lowercase italic">{{ currentCollection.flag }}</p> -->
     </div>
+    <no-ssr>
+      <LightGallery
+        :images="getImages"
+        :index="index"
+        :disable-scroll="true"
+        @close="index = null"
+      />
+    </no-ssr>
     <div
       v-for="(img, ind) in currentCollection.images"
       :key="ind"
@@ -23,9 +31,11 @@
           v-lazy-load
           :src="require(`~/assets/images/${img.src}.jpg`)"
           :alt="img.info"
+          class="cursor-pointer"
           :class="{
             'w-full': img.align == 'left' || img.align == 'right',
           }"
+          @click="index = ind"
         />
       </div>
       <div
@@ -57,6 +67,27 @@ export default {
     currentCollection: {
       type: Object,
       default: () => {},
+    },
+  },
+  data() {
+    return {
+      images: [],
+      index: null,
+    }
+  },
+  computed: {
+    getImages() {
+      const images = []
+      this.currentCollection.images.forEach((img) => {
+        const imgPath = require(`~/assets/images/${img.src}.jpg`)
+        const title = `${img.title}, ${img.size}, ${img.material}`
+        const imgObj = {
+          title,
+          url: imgPath,
+        }
+        images.push(imgObj)
+      })
+      return images
     },
   },
 }
