@@ -1,6 +1,6 @@
 <template>
-  <div class="min-h-screen">
-    <Nuxt class="min-h-screen" />
+  <div :class="{ 'min-h-screen': pageHasGallery }">
+    <Nuxt :class="{ 'min-h-screen': pageHasGallery }" />
     <Footer v-if="!isHomepage" />
   </div>
 </template>
@@ -14,6 +14,11 @@ export default {
   computed: {
     isHomepage() {
       return this.$route.name === 'index'
+    },
+    pageHasGallery() {
+      return (
+        this.$route.name === 'paintings' || this.$route.name === 'installations'
+      )
     },
   },
 }
