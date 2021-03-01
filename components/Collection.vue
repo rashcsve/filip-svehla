@@ -29,7 +29,7 @@
       <div class="sm:w-image" :class="{ 'mx-auto': img.align == 'center' }">
         <img
           v-lazy-load
-          :src="require(`~/assets/images/${img.src}.jpg`)"
+          :src="require(`~/assets/images/${img.src}`)"
           :alt="img.info"
           class="cursor-pointer"
           :class="{
@@ -79,7 +79,7 @@ export default {
     getImages() {
       const images = []
       this.currentCollection.images.forEach((img) => {
-        const imgPath = require(`~/assets/images/${img.src}.jpg`)
+        const imgPath = require(`~/assets/images/${img.src}`)
         const title = `${img.title}, ${img.size}, ${img.material}`
         if (img.title && img.size && img.material) {
           const imgObj = {

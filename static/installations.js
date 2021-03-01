@@ -7,19 +7,19 @@ const installations = [
     flag: 'installation',
     images: [
       {
-        src: 'installations/hnedizitrabudelip/first',
+        src: 'installations/hnedizitrabudelip/first.jpg',
         align: 'center',
       },
       {
-        src: 'installations/hnedizitrabudelip/second',
+        src: 'installations/hnedizitrabudelip/second.jpg',
         align: 'right',
       },
       {
-        src: 'installations/hnedizitrabudelip/third',
+        src: 'installations/hnedizitrabudelip/third.jpg',
         align: 'left',
       },
       {
-        src: 'installations/hnedizitrabudelip/fourth',
+        src: 'installations/hnedizitrabudelip/fourth.jpg',
         align: 'center',
       },
     ],
@@ -32,15 +32,15 @@ const installations = [
     flag: 'installation',
     images: [
       {
-        src: 'installations/renaissance/first',
+        src: 'installations/renaissance/first.jpg',
         align: 'center',
       },
       {
-        src: 'installations/renaissance/second',
+        src: 'installations/renaissance/second.jpg',
         align: 'right',
       },
       {
-        src: 'installations/renaissance/third',
+        src: 'installations/renaissance/third.jpg',
         align: 'left',
       },
     ],
@@ -53,18 +53,18 @@ const installations = [
     flag: 'installation',
     images: [
       {
-        src: 'installations/smucik/first',
+        src: 'installations/smucik/first.jpg',
         align: 'center',
         title: 'No Title',
         size: '220x260x145 cm',
         material: 'Mixed Technique',
       },
       {
-        src: 'installations/smucik/second',
+        src: 'installations/smucik/second.jpg',
         align: 'right',
       },
       {
-        src: 'installations/smucik/third',
+        src: 'installations/smucik/third.jpg',
         align: 'left',
       },
     ],
@@ -77,26 +77,26 @@ const installations = [
     flag: 'installation',
     images: [
       {
-        src: 'installations/houses/first',
+        src: 'installations/houses/first.jpg',
         align: 'center',
       },
       {
-        src: 'installations/houses/second',
+        src: 'installations/houses/second.jpg',
         align: 'right',
       },
       {
-        src: 'installations/houses/third',
+        src: 'installations/houses/third.jpg',
         align: 'left',
       },
       {
-        src: 'installations/houses/fourth',
+        src: 'installations/houses/fourth.jpg',
         align: 'center',
         title: 'No Title',
         size: ' 23x26x15 cm',
         material: 'Mixed Techniques',
       },
       {
-        src: 'installations/houses/fifth',
+        src: 'installations/houses/fifth.jpg',
         align: 'center',
         title: 'No Title',
         size: ' 32x18x16 cm',
