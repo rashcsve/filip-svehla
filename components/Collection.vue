@@ -81,11 +81,15 @@ export default {
       this.currentCollection.images.forEach((img) => {
         const imgPath = require(`~/assets/images/${img.src}.jpg`)
         const title = `${img.title}, ${img.size}, ${img.material}`
-        const imgObj = {
-          title,
-          url: imgPath,
+        if (img.title && img.size && img.material) {
+          const imgObj = {
+            title,
+            url: imgPath,
+          }
+          images.push(imgObj)
+        } else {
+          images.push(imgPath)
         }
-        images.push(imgObj)
       })
       return images
     },
