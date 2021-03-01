@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="h-navbar text-white flex justify-between items-center py-6 px-16"
+    class="h-navbar text-white flex justify-between items-center py-6 pl-16 pr-10"
     :class="[
       `bg-${color}`,
       {
@@ -11,22 +11,21 @@
     ]"
   >
     <h1>
-      <nuxt-link to="/" class="font-bold text-2xl">Filip Švehla</nuxt-link>
+      <nuxt-link to="/" class="text-2xl">Filip Švehla</nuxt-link>
     </h1>
-    <div class="flex">
+    <div class="flex items-center">
       <nuxt-link to="/paintings" class="mr-8">paintings</nuxt-link>
       <nuxt-link to="/installations" class="mr-8">installations</nuxt-link>
       <nuxt-link to="/about" class="mr-8">about</nuxt-link>
-      <a href="https://instagram.com" target="_blank" class="text-red-700">
-        follow
-        <!-- TODO Add icon -->
-      </a>
+      <instagram-button />
     </div>
   </nav>
 </template>
 
 <script>
+import InstagramButton from './InstagramButton.vue'
 export default {
+  components: { InstagramButton },
   props: {
     about: {
       type: Boolean,
