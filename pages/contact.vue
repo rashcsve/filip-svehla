@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navbar class="bg-gray-700" />
+    <Navbar class="bg-chocolate-500" />
     <section class="px-16 py-16 flex">
       <div class="w-full sm:w-1/2">
         <h3 class="text-2xl uppercase">Contact me</h3>

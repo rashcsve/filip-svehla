@@ -1,9 +1,30 @@
 const installations = [
   {
     index: 0,
+    title: 'Make&nbsp;Renaissance&nbsp;Great&nbsp;Again',
+    year: '2021',
+    color: 'sunglow-200',
+    flag: 'installation',
+    images: [
+      {
+        src: 'installations/renaissance/first.jpg',
+        align: 'center',
+      },
+      {
+        src: 'installations/renaissance/second.jpg',
+        align: 'right',
+      },
+      {
+        src: 'installations/renaissance/third.jpg',
+        align: 'left',
+      },
+    ],
+  },
+  {
+    index: 1,
     title: 'Hned&nbsp;i&nbsp;zítra&nbsp;bude&nbsp;líp',
     year: '2020',
-    color: 'pink-200',
+    color: 'sunset-200',
     flag: 'installation',
     images: [
       {
@@ -25,31 +46,10 @@ const installations = [
     ],
   },
   {
-    index: 1,
-    title: 'Make&nbsp;Renaissance&nbsp;Great&nbsp;Again',
-    year: '2021',
-    color: 'green-200',
-    flag: 'installation',
-    images: [
-      {
-        src: 'installations/renaissance/first.jpg',
-        align: 'center',
-      },
-      {
-        src: 'installations/renaissance/second.jpg',
-        align: 'right',
-      },
-      {
-        src: 'installations/renaissance/third.jpg',
-        align: 'left',
-      },
-    ],
-  },
-  {
     index: 2,
     title: 'Šmucik&nbsp;Ordnung',
     year: '2019',
-    color: 'blue-200',
+    color: 'royalblue-200',
     flag: 'installation',
     images: [
       {
@@ -73,7 +73,7 @@ const installations = [
     index: 3,
     title: 'Houses',
     year: '2018',
-    color: 'purple-200',
+    color: 'flamingo-200',
     flag: 'installation',
     images: [
       {

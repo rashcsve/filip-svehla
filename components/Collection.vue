@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="w-full px-16 py-12 overflow-y-scroll bg-white"
-    :class="`text-${currentCollection.color}`"
-  >
+  <div class="w-full px-16 py-12 overflow-y-scroll bg-white text-gray-200">
     <div class="flex justify-between items-center">
       <p class="text-2xl uppercase" v-html="currentCollection.title"></p>
       <p class="italic">{{ currentCollection.year }}</p>

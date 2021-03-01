@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navbar about />
+    <Navbar class="bg-sunglow-300" />
     <div class="container mx-auto py-16 flex">
       <section class="w-1/3">
         <img src="~/assets/images/about.jpg" alt="about photo" class="w-full" />

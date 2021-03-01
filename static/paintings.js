@@ -3,7 +3,7 @@ const paintings = [
     index: 0,
     title: 'Stripes',
     year: '2020-2021',
-    color: 'gray-500',
+    color: 'gray-100',
     flag: 'Paintings',
     images: [
       {
@@ -41,7 +41,7 @@ const paintings = [
     index: 1,
     title: 'paintings',
     year: '2020',
-    color: 'gray-400',
+    color: 'gray-200',
     flag: 'Paintings',
     images: [
       {
@@ -78,7 +78,7 @@ const paintings = [
     index: 2,
     title: 'paintings',
     year: '2019',
-    color: 'yellow-900',
+    color: 'gray-300',
     flag: 'Paintings',
     images: [
       {
@@ -123,7 +123,7 @@ const paintings = [
     index: 3,
     title: 'paintings',
     year: '2018',
-    color: 'gray-200',
+    color: 'gray-400',
     flag: 'Paintings',
     images: [
       {
