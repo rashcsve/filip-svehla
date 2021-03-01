@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen">
     <Nuxt class="min-h-screen" />
-    <Footer />
+    <Footer v-if="!isHomepage" />
   </div>
 </template>
 
@@ -10,6 +10,11 @@ import Footer from '../components/Footer'
 export default {
   components: {
     Footer,
+  },
+  computed: {
+    isHomepage() {
+      return this.$route.name === 'index'
+    },
   },
 }
 </script>
