@@ -6,15 +6,16 @@
         <img src="~/assets/images/about.jpg" alt="about photo" class="w-full" />
       </section>
       <section class="md:ml-20">
-        <h3 class="text-3xl">about me</h3>
+        <p class="">*1991, Prague, Czech Republic</p>
         <div class="flex flex-col my-4">
           <p class="font-bold text-xl">education</p>
           <p>2011-2017</p>
-          <p>Academy of Fine Arts in Prague, Prague, Czech Republic</p>
           <p>
-            Master of Fine Arts in Painting (Jiří Sopko, Michael Rittstein,
+            Academy of Fine Arts in Prague (Jiří Sopko, Michael Rittstein,
             Robert Šalanda)
           </p>
+          <p class="mt-2">2015</p>
+          <p>Utrecht School of the Arts, Netherlands</p>
         </div>
         <div class="flex flex-col my-6">
           <p class="font-bold text-xl">exhibitions</p>
@@ -40,6 +41,11 @@
             Republic.
           </p>
           <p class="text-lg mt-6">group exhibitions</p>
+          <p class="italic mt-2">2021</p>
+          <p>
+            Cena kritiky za mladou malbu - Galerie kritiků, Prague, Czech
+            Republic.
+          </p>
           <p class="italic mt-2">2019</p>
           <p>
             Leinemann Kunstpreis - Negative Realism, Czech Center, Berlin,

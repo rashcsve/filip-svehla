@@ -55,9 +55,9 @@ const installations = [
       {
         src: 'installations/smucik/first.jpg',
         align: 'center',
-        title: 'No Title',
+        title: 'Without Title',
         size: '220x260x145 cm',
-        material: 'Mixed Technique',
+        material: 'Mixed Media',
       },
       {
         src: 'installations/smucik/second.jpg',
@@ -91,16 +91,16 @@ const installations = [
       {
         src: 'installations/houses/fourth.jpg',
         align: 'center',
-        title: 'No Title',
+        title: 'Without Title',
         size: ' 23x26x15 cm',
-        material: 'Mixed Techniques',
+        material: 'Mixed Media',
       },
       {
         src: 'installations/houses/fifth.jpg',
         align: 'center',
-        title: 'No Title',
+        title: 'Without Title',
         size: ' 32x18x16 cm',
-        material: 'Mixed Techniques',
+        material: 'Mixed Media',
       },
     ],
   },
