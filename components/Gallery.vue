@@ -75,6 +75,7 @@ export default {
       this.data = installations
     }
     this.$store.commit('setColor', this.currentCollection.color)
+    this.$store.commit('setAlign', 'left')
   },
   destroyed() {
     window.removeEventListener('scroll', this.handleScroll)
@@ -83,6 +84,15 @@ export default {
     next(index, color) {
       this.index = index
       this.$store.commit('setColor', color)
+      let align
+      if (index === 0) {
+        align = 'left'
+      } else if (index === this.data.length - 1) {
+        align = 'right'
+      } else {
+        align = 'center'
+      }
+      this.$store.commit('setAlign', align)
     },
     enter(el, done) {
       const tl = this.$gsap.timeline({ onComplete: done })

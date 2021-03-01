@@ -1,7 +1,14 @@
 <template>
-  <div
-    class="h-navbar w-full py-6 text-white px-16 flex justify-between items-center rounded-l-3xl"
-    :class="`bg-${color}`"
+  <nav
+    class="h-navbar text-white flex justify-between items-center py-6 px-16"
+    :class="[
+      `bg-${color}`,
+      {
+        'rounded-l-3xl': align === 'left',
+        'rounded-r-3xl': align === 'right',
+        'rounded-none': align === 'center',
+      },
+    ]"
   >
     <h1>
       <nuxt-link to="/" class="font-bold text-2xl">Filip Švehla</nuxt-link>
@@ -15,7 +22,7 @@
         <!-- TODO Add icon -->
       </a>
     </div>
-  </div>
+  </nav>
 </template>
 
 <script>
@@ -37,6 +44,9 @@ export default {
   computed: {
     color() {
       return this.$store.state.color
+    },
+    align() {
+      return this.$store.state.align
     },
   },
 }
