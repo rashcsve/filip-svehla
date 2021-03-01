@@ -15,7 +15,7 @@ module.exports = {
       },
       width: {
         image: '32rem',
-      }
+      },
     },
   },
 }

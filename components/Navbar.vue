@@ -17,6 +17,7 @@
       <nuxt-link to="/paintings" class="mr-8">paintings</nuxt-link>
       <nuxt-link to="/installations" class="mr-8">installations</nuxt-link>
       <nuxt-link to="/about" class="mr-8">about</nuxt-link>
+      <nuxt-link to="/contact" class="mr-8">contact</nuxt-link>
       <instagram-button />
     </div>
   </nav>
