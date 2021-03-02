@@ -22,7 +22,7 @@ export default {
       },
     ],
   },
-
+  loading: { color: '#f17816' },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
@@ -40,9 +40,6 @@ export default {
     '@nuxtjs/tailwindcss',
     'nuxt-gsap-module',
   ],
-  purgeCSS: {
-    enabled: false,
-  },
   gsap: {
     extraPlugins: {
       text: true,
