@@ -40,7 +40,9 @@ export default {
     '@nuxtjs/tailwindcss',
     'nuxt-gsap-module',
   ],
-
+  purgeCSS: {
+    enabled: false,
+  },
   gsap: {
     extraPlugins: {
       text: true,
