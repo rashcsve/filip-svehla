@@ -1,6 +1,11 @@
 <template>
-  <div :class="{ 'min-h-screen': pageHasGallery }">
-    <Nuxt :class="{ 'min-h-screen': pageHasGallery }" />
+  <div
+    :class="{
+      'min-h-screen': pageHasGallery || contactPage,
+      'flex flex-col': contactPage,
+    }"
+  >
+    <Nuxt :class="{ 'min-h-screen': pageHasGallery, 'flex-1': contactPage }" />
     <Footer v-if="!isHomepage" />
   </div>
 </template>
@@ -19,6 +24,9 @@ export default {
       return (
         this.$route.name === 'paintings' || this.$route.name === 'installations'
       )
+    },
+    contactPage() {
+      return this.$route.name === 'contact'
     },
   },
 }

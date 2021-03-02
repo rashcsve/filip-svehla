@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h4 v-if="isSent">Thanks for you message. We will get in touch soon.</h4>
+    <h4 v-if="isSent">Thanks for your message. We will get in touch soon.</h4>
     <p v-if="isError" class="mb-2 text-red-500">
-      Error has happenned. Please try again.
+      An error occured. Please try again.
     </p>
     <form
       v-if="!isSent"
