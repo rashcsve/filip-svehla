@@ -4,7 +4,7 @@ const paintings = [
     title: 'Stripes',
     year: '2020-2021',
     color: 'gray-100',
-    flag: 'Paintings',
+    flag: 'paintings',
     images: [
       {
         src: 'paintings/stripes/first.jpg',
@@ -35,7 +35,7 @@ const paintings = [
     title: 'Grid',
     year: '2020',
     color: 'gray-200',
-    flag: 'Paintings',
+    flag: 'paintings',
     images: [
       {
         src: 'paintings/2020/first.jpg',
@@ -72,7 +72,7 @@ const paintings = [
     title: 'Structures',
     year: '2019',
     color: 'gray-300',
-    flag: 'Paintings',
+    flag: 'paintings',
     images: [
       {
         src: 'paintings/2019/first.webp',
@@ -103,7 +103,7 @@ const paintings = [
     title: 'Houses',
     year: '2018',
     color: 'gray-400',
-    flag: 'Paintings',
+    flag: 'paintings',
     images: [
       {
         src: 'paintings/2018/first.jpg',

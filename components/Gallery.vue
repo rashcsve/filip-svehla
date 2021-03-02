@@ -20,8 +20,17 @@
       <div
         v-if="ind !== index"
         class="next card rounded-b-3xl flex flex-col justify-between items-center md:h-full"
-        :class="`bg-${item.color}`"
-        @click="next(item.index, item.color)"
+        :class="{
+          'bg-gray-100': getColor(item.index, item.flag) === 'paintingOne',
+          'bg-gray-200': getColor(item.index, item.flag) === 'paintingTwo',
+          'bg-gray-300': getColor(item.index, item.flag) === 'paintingThree',
+          'bg-white': getColor(item.index, item.flag) === 'paintingFour',
+          'bg-sunglow-100': getColor(item.index, item.flag) === 'instalOne',
+          'bg-sunset-100': getColor(item.index, item.flag) === 'instalTwo',
+          'bg-royalblue-100': getColor(item.index, item.flag) === 'instalThree',
+          'bg-flamingo-100': getColor(item.index, item.flag) === 'instalFour',
+        }"
+        @click="next(item.index, item.flag)"
       >
         <div class="flex flex-col text-xs italic items-center mt-8 lowercase">
           <p>{{ item.year }}</p>
@@ -73,10 +82,11 @@ export default {
     window.addEventListener('scroll', this.handleScroll)
     if (this.arePaintings) {
       this.data = paintings
+      this.$store.commit('setColor', 'paintingOne')
     } else {
       this.data = installations
+      this.$store.commit('setColor', 'instalOne')
     }
-    this.$store.commit('setColor', this.currentCollection.color)
     this.$store.commit('setAlign', 'left')
   },
   destroyed() {
@@ -85,7 +95,7 @@ export default {
   methods: {
     next(index, color) {
       this.index = index
-      this.$store.commit('setColor', color)
+      this.setColor(index)
       let align
       if (index === 0) {
         align = 'left'
@@ -115,15 +125,34 @@ export default {
         { autoAlpha: 0, ease: 'power2.easeOut', onComplete: done }
       )
     },
-
     handleScroll(e) {
-      // if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-      //   this.onScroll = false
-      // } else
       if (window.scrollY !== 0) {
         this.onScroll = true
       } else {
         this.onScroll = false
+      }
+    },
+    setColor(index, flag) {
+      const color = this.getColor(index, flag)
+      this.$store.commit('setColor', color)
+    },
+    getColor(index, flag) {
+      if (flag === 'paintings' && index === 0) {
+        return 'paintingOne'
+      } else if (flag === 'paintings' && index === 1) {
+        return 'paintingTwo'
+      } else if (flag === 'paintings' && index === 2) {
+        return 'paintingThree'
+      } else if (flag === 'paintings' && index === 3) {
+        return 'paintingFour'
+      } else if (flag === 'installation' && index === 0) {
+        return 'instalOne'
+      } else if (flag === 'installation' && index === 1) {
+        return 'instalTwo'
+      } else if (flag === 'installation' && index === 2) {
+        return 'instalThree'
+      } else if (flag === 'installation' && index === 3) {
+        return 'instalFour'
       }
     },
   },

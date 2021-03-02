@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navbar :class="color" />
+    <Navbar />
     <div class="container mx-auto py-16 flex">
       <section class="w-1/3">
         <img
@@ -90,13 +90,8 @@ export default {
   components: {
     Navbar,
   },
-  data() {
-    return {
-      color: 'bg-sunglow-300',
-    }
-  },
   created() {
-    this.$store.commit('setColor', this.color)
+    this.$store.commit('setColor', 'about')
     this.$store.commit('setAlign', 'center')
   },
 }

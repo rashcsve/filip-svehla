@@ -1,14 +1,21 @@
 <template>
   <nav
     class="h-navbar flex justify-between items-center py-6 pl-16 pr-10"
-    :class="[
-      `bg-${color}`,
-      {
-        'rounded-l-3xl': align === 'left',
-        'rounded-r-3xl': align === 'right',
-        'rounded-none': align === 'center',
-      },
-    ]"
+    :class="{
+      'rounded-l-3xl': align === 'left',
+      'rounded-r-3xl': align === 'right',
+      'rounded-none': align === 'center',
+      'bg-gray-100': color == 'paintingOne',
+      'bg-gray-200': color === 'paintingTwo',
+      'bg-gray-300': color === 'paintingThree',
+      'bg-white': color === 'paintingFour',
+      'bg-sunglow-100': color === 'instalOne',
+      'bg-sunset-100': color === 'instalTwo',
+      'bg-royalblue-100': color === 'instalThree',
+      'bg-flamingo-100': color === 'instalFour',
+      'bg-sunglow-300': color === 'about',
+      'bg-chocolate-500': color === 'contact',
+    }"
   >
     <h1>
       <nuxt-link to="/" class="text-2xl">Filip Švehla</nuxt-link>
