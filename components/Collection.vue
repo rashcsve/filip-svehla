@@ -20,8 +20,8 @@
       :key="ind"
       class="px-8 py-4 md:pt-8 md:pb-24 mx-auto md:px-32 flex flex-col"
       :class="{
-        'md:flex': img.align == 'left' || img.align == 'right',
-        'flex-row-reverse': img.align == 'right',
+        'md:flex-row': img.align == 'left' || img.align == 'right',
+        'md:flex-row-reverse': img.align == 'right',
         'justify-center mx-auto': img.align == 'center',
       }"
     >
