@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar />
-    <section class="px-16 py-16 flex">
+    <section class="md:p-16 p-8 flex">
       <div class="w-full sm:w-1/2">
         <h3 class="text-2xl uppercase">Contact me</h3>
         <ContactForm />

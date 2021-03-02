@@ -1,5 +1,7 @@
 <template>
-  <div class="w-full px-16 py-12 overflow-y-scroll bg-white text-gray-200">
+  <div
+    class="w-full px-8 py-6 md:px-16 md:py-12 overflow-y-scroll bg-white text-gray-200"
+  >
     <div class="flex justify-between items-center">
       <p class="text-2xl uppercase" v-html="currentCollection.title"></p>
       <p class="italic">{{ currentCollection.year }}</p>
@@ -16,14 +18,17 @@
     <div
       v-for="(img, ind) in currentCollection.images"
       :key="ind"
-      class="pt-8 pb-24 mx-auto px-32"
+      class="px-8 py-4 md:pt-8 md:pb-24 mx-auto md:px-32 flex flex-col"
       :class="{
-        flex: img.align == 'left' || img.align == 'right',
+        'md:flex': img.align == 'left' || img.align == 'right',
         'flex-row-reverse': img.align == 'right',
         'justify-center mx-auto': img.align == 'center',
       }"
     >
-      <div class="sm:w-image" :class="{ 'mx-auto': img.align == 'center' }">
+      <div
+        class="w-full sm:w-image"
+        :class="{ 'mx-auto': img.align == 'center' }"
+      >
         <img
           v-lazy-load
           :src="require(`~/assets/images/${img.src}`)"
@@ -43,8 +48,8 @@
         <div
           class="mt-4"
           :class="{
-            'px-4': img.align == 'left' || img.align == 'right',
-            'text-right': img.align == 'right',
+            'md:px-4': img.align == 'left' || img.align == 'right',
+            'md:text-right': img.align == 'right',
             'mx-auto': img.align == 'center',
           }"
         >

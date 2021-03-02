@@ -1,12 +1,14 @@
 <template>
-  <div class="flex px-16 py-12 justify-between items-center">
-    <div class="flex">
+  <div
+    class="flex flex-col md:flex-row p-8 md:px-16 md:py-12 md:justify-between md:items-center"
+  >
+    <div class="flex mb-4 md:mb-0">
       <Instagram />
       <Facebook />
     </div>
     <div class>
       <p>2021 © Filip Švehla. All rights reserved</p>
-      <p class="text-xs text-gray-700 text-right">
+      <p class="text-xs text-gray-200 md:text-right">
         developed by
         <a class="hover:underline" href="mailto:svetlana.rashchupkina@gmail.com"
           >Svetlana Rashchupkina</a

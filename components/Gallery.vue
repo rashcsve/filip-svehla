@@ -1,12 +1,15 @@
 <template>
-  <div id="gallery" class="flex flex-grow h-full w-full">
+  <div
+    id="gallery"
+    class="flex-col-reverse md:flex-row flex flex-grow h-full w-full"
+  >
     <div
       v-for="(item, ind) in data"
       :key="ind"
       class="flex top-0 right-0 relative md:h-screen"
       :class="{
         'w-full': ind === index,
-        'md:h-screen sticky': ind !== index && onScroll,
+        'md:h-screen md:sticky': ind !== index && onScroll,
         'md:h-gallery': ind !== index && !onScroll,
       }"
     >
@@ -19,7 +22,7 @@
       </transition>
       <div
         v-if="ind !== index"
-        class="next card rounded-b-3xl flex flex-col justify-between items-center md:h-full"
+        class="w-full px-8 py-2 flex-row-reverse md:p-0 next cursor-pointer md:rounded-b-3xl flex md:flex-col justify-between items-center md:h-full"
         :class="{
           'bg-gray-100': getColor(item.index, item.flag) === 'paintingOne',
           'bg-gray-200': getColor(item.index, item.flag) === 'paintingTwo',
@@ -32,13 +35,15 @@
         }"
         @click="next(item.index, item.flag)"
       >
-        <div class="flex flex-col text-xs italic items-center mt-8 lowercase">
+        <div
+          class="flex flex-col text-xs italic items-center md:mt-8 lowercase"
+        >
           <p>{{ item.year }}</p>
           <p>{{ item.flag }}</p>
         </div>
-        <div class="absolute bottom-0">
+        <div class="md:absolute bottom-0">
           <p
-            class="uppercase text-2xl text-rotate mb-12"
+            class="uppercase md:text-2xl text-rotate md:mb-12"
             v-html="item.title"
           ></p>
         </div>
@@ -185,31 +190,29 @@ export default {
 .slide-leave-to {
   transform: translateX(-100%, 0);
 }
-.show-enter-to,
-.show-leave {
-  transform: translateX(0);
-  transition: all 0.5s ease-in;
-}
-.show-enter,
-.show-leave-to {
-  transform: translateX(50%);
-}
-.next {
-  cursor: pointer;
-  width: 80px;
-  padding: 8px;
-  transition: all 0.7s ease;
-  text-decoration: none;
-  user-select: none;
-}
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-.card {
-  transition: all 200ms ease-in-out 50ms;
-}
-.text-rotate {
-  transform-origin: left;
-  transform: translate(50%, 50%) rotate(-90deg);
+@media screen and (min-width: 748px) {
+  .next {
+    width: 80px;
+    padding: 8px;
+    transition: all 0.7s ease;
+    text-decoration: none;
+    user-select: none;
+  }
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .text-rotate {
+    transform-origin: left;
+    transform: translate(50%, 50%) rotate(-90deg);
+  }
+  .show-enter-to,
+  .show-leave {
+    transform: translateX(0);
+    transition: all 0.5s ease-in;
+  }
+  .show-enter,
+  .show-leave-to {
+    transform: translateX(50%);
+  }
 }
 </style>

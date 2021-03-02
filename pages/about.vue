@@ -1,8 +1,8 @@
 <template>
   <div>
     <Navbar />
-    <div class="container mx-auto py-16 flex">
-      <section class="w-1/3">
+    <div class="container mx-auto p-8 md:py-16 flex flex-col md:flex-row">
+      <section class="md:w-1/3">
         <img
           v-lazy-load
           src="~/assets/images/about.jpg"
@@ -10,7 +10,7 @@
           class="w-full"
         />
       </section>
-      <section class="md:ml-20">
+      <section class="mt-4 md:mt-0 md:ml-20">
         <p class="">*1991, Prague, Czech Republic</p>
         <div class="flex flex-col my-4">
           <p class="font-bold text-xl">education</p>
@@ -80,6 +80,11 @@
           <p>Výstava Sympozia Lukov, Topičův Klub, Prague, Czech Republic.</p>
         </div>
       </section>
+      <nuxt-link
+        class="md:hidden text-chocolate-500 fond-bold text-lg"
+        to="/paintings"
+        >See paintings</nuxt-link
+      >
     </div>
   </div>
 </template>

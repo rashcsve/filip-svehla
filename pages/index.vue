@@ -1,9 +1,9 @@
 <template>
-  <div class="bg-gray-100 w-full md:h-screen">
+  <div class="bg-gray-100 w-full h-screen">
     <div
-      class="md:grid md:grid-cols-2 md:grid-rows-layout overflow-hidden w-full md:h-screen relative"
+      class="flex flex-col md:grid md:grid-cols-2 md:grid-rows-layout overflow-hidden w-full md:h-screen relative"
     >
-      <div class="overflow-hidden w-full box-slide-left-top">
+      <div class="hidden md:block overflow-hidden w-full box-slide-left-top">
         <div class="w-full bg-white h-leftTopTile tile"></div>
       </div>
       <div
@@ -11,13 +11,14 @@
       >
         <navbar-top class="navbar-top" />
       </div>
+      <div class="flex md:hidden bg-sunglow-300 h-mobileHPBody"></div>
       <div
         class="row-start-2 row-end-4 w-full overflow-hidden flex box-slide-left-bottom"
       >
         <navbar-bottom class="navbar-bottom" />
       </div>
       <div
-        class="col-start-2 col-end-2 row-start-3 row-end-4 flex w-full overflow-hidden box-slide-right-bottom"
+        class="hidden md:flex h-full col-start-2 col-end-2 row-start-3 row-end-4 w-full overflow-hidden box-slide-right-bottom"
       ></div>
       <h1 class="absolute text-5xl title">
         czech artist
@@ -71,11 +72,7 @@ export default {
   },
   methods: {
     animate() {
-      const tl = this.$gsap.timeline({
-        // onComplete() {
-        //   this.restart(true)
-        // },
-      })
+      const tl = this.$gsap.timeline()
       tl.from('.box-slide-left-top', 0.3, { opacity: 0, x: -window.innerWidth })
       tl.from('.box-slide-right-top', 0.3, {
         opacity: 0,
@@ -105,6 +102,13 @@ export default {
   transform: translate(-47%, -50%);
   top: 50%;
   left: 51%;
+}
+@media screen and (max-width: 600px) {
+  .title {
+    top: 25%;
+    width: 270px;
+    transform: translate(-45%, -25%);
+  }
 }
 /* .box-slide-left-top {
   background-color: #e620a0;
