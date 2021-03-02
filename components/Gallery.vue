@@ -93,9 +93,9 @@ export default {
     window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
-    next(index, color) {
+    next(index, flag) {
       this.index = index
-      this.setColor(index)
+      this.setColor(index, flag)
       let align
       if (index === 0) {
         align = 'left'
