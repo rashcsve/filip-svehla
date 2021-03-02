@@ -28,19 +28,19 @@ const installations = [
     flag: 'installation',
     images: [
       {
-        src: 'installations/hnedizitrabudelip/first.jpg',
+        src: 'installations/hnedizitrabudelip/first.webp',
         align: 'left',
       },
       {
-        src: 'installations/hnedizitrabudelip/second.jpg',
+        src: 'installations/hnedizitrabudelip/second.webp',
         align: 'right',
       },
       {
-        src: 'installations/hnedizitrabudelip/third.jpg',
+        src: 'installations/hnedizitrabudelip/third.webp',
         align: 'left',
       },
       {
-        src: 'installations/hnedizitrabudelip/fourth.jpg',
+        src: 'installations/hnedizitrabudelip/fourth.webp',
         align: 'right',
       },
     ],
@@ -53,18 +53,18 @@ const installations = [
     flag: 'installation',
     images: [
       {
-        src: 'installations/smucik/first.jpg',
+        src: 'installations/smucik/first.webp',
         align: 'right',
         title: 'Without Title',
         size: '220x260x145 cm',
         material: 'Mixed Media',
       },
       {
-        src: 'installations/smucik/second.jpg',
+        src: 'installations/smucik/second.webp',
         align: 'left',
       },
       {
-        src: 'installations/smucik/third.jpg',
+        src: 'installations/smucik/third.webp',
         align: 'right',
       },
     ],
@@ -77,26 +77,26 @@ const installations = [
     flag: 'installation',
     images: [
       {
-        src: 'installations/houses/first.jpg',
+        src: 'installations/houses/first.webp',
         align: 'center',
       },
       {
-        src: 'installations/houses/second.jpg',
+        src: 'installations/houses/second.webp',
         align: 'right',
       },
       {
-        src: 'installations/houses/third.jpg',
+        src: 'installations/houses/third.webp',
         align: 'left',
       },
       {
-        src: 'installations/houses/fourth.jpg',
+        src: 'installations/houses/fourth.webp',
         align: 'center',
         title: 'Without Title',
         size: ' 23x26x15 cm',
         material: 'Mixed Media',
       },
       {
-        src: 'installations/houses/fifth.jpg',
+        src: 'installations/houses/fifth.webp',
         align: 'center',
         title: 'Without Title',
         size: ' 32x18x16 cm',
