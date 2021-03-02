@@ -20,7 +20,7 @@
       <div
         class="hidden md:flex h-full col-start-2 col-end-2 row-start-3 row-end-4 w-full overflow-hidden box-slide-right-bottom"
       ></div>
-      <h1 class="absolute text-5xl title">
+      <h1 class="absolute text-5xl title text-turquoise-600">
         czech artist
         <div></div>
       </h1>
@@ -135,7 +135,7 @@ export default {
   background-color: #f17816;
 }
 .box-slide-left-top .tile {
-  background-color: black;
+  background-color: #67e5de;
 }
 .box-slide-right-top {
   background-color: #ffee24;
@@ -150,6 +150,6 @@ export default {
   background-color: #ffee24;
 }
 .navbar-bottom {
-  background-color: black;
+  background-color: #67e5de;
 }
 </style>

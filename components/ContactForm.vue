@@ -37,7 +37,7 @@
       </div>
       <div class="mt-4">
         <button
-          class="uppercase font-bold bg-steel-300 hover:bg-gray-600 text-white p-3 rounded-lg w-full focus:outline-none focus:shadow-outline"
+          class="uppercase font-bold bg-turquoise-300 hover:bg-turquoise-600 hover:bg-gray-600 text-white p-3 rounded-lg w-full focus:outline-none focus:shadow-outline"
           type="submit"
           value="Send message"
         >

@@ -3,7 +3,7 @@
     <a
       href="https://www.instagram.com/svehlafilip/"
       target="_blank"
-      class="flex py-2 text-white rounded-2xl justify-center md:justify-start"
+      class="flex py-2 text-xl text-white rounded-2xl justify-center md:justify-start"
       >follow</a
     >
   </div>

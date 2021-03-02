@@ -9,14 +9,14 @@
       <p class="italic">{{ currentCollection.year }}</p>
       <!-- <p class="lowercase italic">{{ currentCollection.flag }}</p> -->
     </div>
-    <no-ssr>
+    <client-only>
       <LightGallery
         :images="getImages"
         :index="index"
         :disable-scroll="true"
         @close="index = null"
       />
-    </no-ssr>
+    </client-only>
     <div
       v-for="(img, ind) in currentCollection.images"
       :key="ind"
