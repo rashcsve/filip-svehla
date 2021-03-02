@@ -3,7 +3,7 @@ const installations = [
     index: 0,
     title: 'Make&nbsp;Renaissance&nbsp;Great&nbsp;Again',
     year: '2021',
-    color: 'sunglow-200',
+    color: 'sunglow-100',
     flag: 'installation',
     images: [
       {
@@ -24,12 +24,12 @@ const installations = [
     index: 1,
     title: 'Hned&nbsp;i&nbsp;zítra&nbsp;bude&nbsp;líp',
     year: '2020',
-    color: 'sunset-200',
+    color: 'sunset-100',
     flag: 'installation',
     images: [
       {
         src: 'installations/hnedizitrabudelip/first.jpg',
-        align: 'center',
+        align: 'left',
       },
       {
         src: 'installations/hnedizitrabudelip/second.jpg',
@@ -41,7 +41,7 @@ const installations = [
       },
       {
         src: 'installations/hnedizitrabudelip/fourth.jpg',
-        align: 'center',
+        align: 'right',
       },
     ],
   },
@@ -49,23 +49,23 @@ const installations = [
     index: 2,
     title: 'Šmucik&nbsp;Ordnung',
     year: '2019',
-    color: 'royalblue-200',
+    color: 'royalblue-100',
     flag: 'installation',
     images: [
       {
         src: 'installations/smucik/first.jpg',
-        align: 'center',
+        align: 'right',
         title: 'Without Title',
         size: '220x260x145 cm',
         material: 'Mixed Media',
       },
       {
         src: 'installations/smucik/second.jpg',
-        align: 'right',
+        align: 'left',
       },
       {
         src: 'installations/smucik/third.jpg',
-        align: 'left',
+        align: 'right',
       },
     ],
   },
@@ -73,7 +73,7 @@ const installations = [
     index: 3,
     title: 'Houses',
     year: '2018',
-    color: 'flamingo-200',
+    color: 'flamingo-100',
     flag: 'installation',
     images: [
       {

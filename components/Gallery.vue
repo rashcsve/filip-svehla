@@ -27,10 +27,12 @@
           <p>{{ item.year }}</p>
           <p>{{ item.flag }}</p>
         </div>
-        <p
-          class="uppercase text-2xl transform -rotate-90 mb-12"
-          v-html="item.title"
-        ></p>
+        <div class="absolute bottom-0">
+          <p
+            class="uppercase text-2xl text-rotate mb-12"
+            v-html="item.title"
+          ></p>
+        </div>
       </div>
     </div>
   </div>
@@ -176,5 +178,9 @@ export default {
 }
 .card {
   transition: all 200ms ease-in-out 50ms;
+}
+.text-rotate {
+  transform-origin: left;
+  transform: translate(50%, 50%) rotate(-90deg);
 }
 </style>

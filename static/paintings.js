@@ -39,28 +39,28 @@ const paintings = [
     images: [
       {
         src: 'paintings/2020/first.jpg',
-        align: 'center',
+        align: 'left',
         title: 'Without Title',
         size: '46x55 cm',
         material: 'Oil on Canvas',
       },
       {
         src: 'paintings/2020/second.jpg',
-        align: 'center',
+        align: 'right',
         title: 'Without Title',
         size: '146x195 cm',
         material: 'Oil on Canvas',
       },
       {
         src: 'paintings/2020/dandy.jpg',
-        align: 'center',
+        align: 'left',
         title: 'Dandy',
         size: '165x205 cm',
         material: 'Oil on Canvas',
       },
       {
         src: 'paintings/2020/weakling.jpg',
-        align: 'center',
+        align: 'right',
         title: 'Weakling',
         size: '165x205 cm',
         material: 'Oil on Canvas',
@@ -76,21 +76,21 @@ const paintings = [
     images: [
       {
         src: 'paintings/2019/first.webp',
-        align: 'center',
-        title: 'Without Title',
-        size: '150x145 cm',
-        material: 'Oil on Canvas',
-      },
-      {
-        src: 'paintings/2019/second.webp',
         align: 'right',
         title: 'Without Title',
         size: '150x145 cm',
         material: 'Oil on Canvas',
       },
       {
-        src: 'paintings/2019/third.webp',
+        src: 'paintings/2019/second.webp',
         align: 'left',
+        title: 'Without Title',
+        size: '150x145 cm',
+        material: 'Oil on Canvas',
+      },
+      {
+        src: 'paintings/2019/third.webp',
+        align: 'right',
         title: 'Without Title',
         size: '150x145 cm',
         material: 'Acrylic on Canvas',

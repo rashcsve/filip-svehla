@@ -16,7 +16,7 @@
     <div
       v-for="(img, ind) in currentCollection.images"
       :key="ind"
-      class="pt-8 pb-16 mx-auto px-32"
+      class="pt-8 pb-24 mx-auto px-32"
       :class="{
         flex: img.align == 'left' || img.align == 'right',
         'flex-row-reverse': img.align == 'right',

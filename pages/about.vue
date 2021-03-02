@@ -3,7 +3,12 @@
     <Navbar class="bg-sunglow-300" />
     <div class="container mx-auto py-16 flex">
       <section class="w-1/3">
-        <img src="~/assets/images/about.jpg" alt="about photo" class="w-full" />
+        <img
+          v-lazy-load
+          src="~/assets/images/about.jpg"
+          alt="about photo"
+          class="w-full"
+        />
       </section>
       <section class="md:ml-20">
         <p class="">*1991, Prague, Czech Republic</p>

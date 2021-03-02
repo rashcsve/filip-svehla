@@ -143,7 +143,8 @@ module.exports = {
         200: '#a2a2a2',
         300: '#8f6f40',
         400: '#FFFFFF',
-      }
+      },
+      white: '#FFFFFF',
     },
   },
 }

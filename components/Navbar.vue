@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="h-navbar text-white flex justify-between items-center py-6 pl-16 pr-10"
+    class="h-navbar flex justify-between items-center py-6 pl-16 pr-10"
     :class="[
       `bg-${color}`,
       {
