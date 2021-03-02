@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navbar class="bg-sunglow-300" />
+    <Navbar :class="color" />
     <div class="container mx-auto py-16 flex">
       <section class="w-1/3">
         <img
@@ -89,6 +89,15 @@ import Navbar from '../components/Navbar'
 export default {
   components: {
     Navbar,
+  },
+  data() {
+    return {
+      color: 'bg-sunglow-300',
+    }
+  },
+  created() {
+    this.$store.commit('setColor', this.color)
+    this.$store.commit('setAlign', 'center')
   },
 }
 </script>
