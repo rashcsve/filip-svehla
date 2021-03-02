@@ -16,8 +16,8 @@
           <p class="font-bold text-xl">education</p>
           <p>2011-2017</p>
           <p>
-            Academy of Fine Arts in Prague (Jiří Sopko, Michael Rittstein,
-            Robert Šalanda)
+            Academy of Fine Arts in Prague (prof. Jiří Sopko, prof. Michael
+            Rittstein, MgA. Robert Šalanda)
           </p>
           <p class="mt-2">2015</p>
           <p>Utrecht School of the Arts, Netherlands</p>
