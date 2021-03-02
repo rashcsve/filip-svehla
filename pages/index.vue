@@ -11,20 +11,7 @@
       >
         <navbar-top class="navbar-top" />
       </div>
-      <div
-        class="flex md:hidden justify-center items-center bg-sunglow-300 h-mobileHPBody"
-      >
-        <nuxt-link
-          to="/paintings"
-          class="w-full mx-auto h-full flex items-center"
-        >
-          <img
-            src="~/assets/images/homepage.jpg"
-            class="w-2/3 mx-auto image"
-            alt="portrait"
-          />
-        </nuxt-link>
-      </div>
+      <div class="flex md:hidden bg-sunglow-300 h-mobileHPBody"></div>
       <div
         class="row-start-2 row-end-4 w-full overflow-hidden flex box-slide-left-bottom"
       >
@@ -120,10 +107,10 @@ export default {
 }
 @media screen and (max-width: 600px) {
   .title {
-    top: 17%;
+    top: 25%;
     width: 200px;
     text-align: center;
-    transform: translate(-51%, -17%);
+    transform: translate(-51%, -25%);
   }
   .image {
     height: 66.666667%;
