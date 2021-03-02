@@ -7,10 +7,10 @@
         {{ currentCollection.title }}
       </p>
       <p class="italic">{{ currentCollection.year }}</p>
-      <!-- <p class="lowercase italic">{{ currentCollection.flag }}</p> -->
     </div>
     <client-only>
       <LightGallery
+        class="hidden md:block"
         :images="getImages"
         :index="index"
         :disable-scroll="true"
