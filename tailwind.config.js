@@ -11,7 +11,7 @@ module.exports = {
         leftTopTile: '60px',
         navbar: '80px',
         gallery: 'calc(100vh - 80px)',
-        mobileHPBody: 'calc(100vh - 200px)',
+        mobileHPBody: 'calc(100vh - 210px)',
         tile: '100px',
       },
       width: {

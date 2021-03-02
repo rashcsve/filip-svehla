@@ -11,7 +11,20 @@
       >
         <navbar-top class="navbar-top" />
       </div>
-      <div class="flex md:hidden bg-sunglow-300 h-mobileHPBody"></div>
+      <div
+        class="flex md:hidden justify-center items-center bg-sunglow-300 h-mobileHPBody"
+      >
+        <nuxt-link
+          to="/paintings"
+          class="w-full mx-auto h-full flex items-center"
+        >
+          <img
+            src="~/assets/images/homepage.jpg"
+            class="w-2/3 mx-auto image"
+            alt="portrait"
+          />
+        </nuxt-link>
+      </div>
       <div
         class="row-start-2 row-end-4 w-full overflow-hidden flex box-slide-left-bottom"
       >
@@ -20,10 +33,12 @@
       <div
         class="hidden md:flex h-full col-start-2 col-end-2 row-start-3 row-end-4 w-full overflow-hidden box-slide-right-bottom"
       ></div>
-      <h1 class="absolute text-5xl title text-turquoise-600">
-        czech artist
-        <div></div>
-      </h1>
+      <nuxt-link to="/paintings">
+        <h1 class="absolute text-4xl md:text-5xl title text-turquoise-600">
+          czech artist
+          <div></div>
+        </h1>
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -105,9 +120,13 @@ export default {
 }
 @media screen and (max-width: 600px) {
   .title {
-    top: 25%;
-    width: 270px;
-    transform: translate(-45%, -25%);
+    top: 17%;
+    width: 200px;
+    text-align: center;
+    transform: translate(-51%, -17%);
+  }
+  .image {
+    height: 66.666667%;
   }
 }
 /* .box-slide-left-top {
