@@ -36,17 +36,18 @@
         @click="next(item.index, item.flag)"
       >
         <div
-          class="flex flex-col text-xs italic items-center md:mt-8 lowercase"
+          class="hidden md:flex flex-col text-xs italic items-center md:mt-8 lowercase"
         >
           <p>{{ item.year }}</p>
           <p>{{ item.flag }}</p>
         </div>
-        <div class="md:absolute bottom-0">
-          <p
-            class="uppercase md:text-2xl text-rotate md:mb-12"
-            v-html="item.title"
-          ></p>
+        <div class="hidden md:flex md:absolute bottom-0">
+          <p class="uppercase md:text-2xl text-rotate md:mb-12 md:w-image">
+            {{ item.title }}
+          </p>
         </div>
+        <p class="uppercase md:hidden">{{ item.year }}</p>
+        <p class="md:hidden text-xs italic lowercase">{{ item.title }}</p>
       </div>
     </div>
   </div>

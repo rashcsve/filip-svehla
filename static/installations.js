@@ -1,7 +1,7 @@
 const installations = [
   {
     index: 0,
-    title: 'Make&nbsp;Renaissance&nbsp;Great&nbsp;Again',
+    title: 'Make Renaissance Great Again',
     year: '2021',
     color: 'sunglow-100',
     flag: 'installation',
@@ -22,7 +22,7 @@ const installations = [
   },
   {
     index: 1,
-    title: 'Hned&nbsp;i&nbsp;zítra&nbsp;bude&nbsp;líp',
+    title: 'Hned i zítra bude líp',
     year: '2020',
     color: 'sunset-100',
     flag: 'installation',
@@ -47,7 +47,7 @@ const installations = [
   },
   {
     index: 2,
-    title: 'Šmucik&nbsp;Ordnung',
+    title: 'Šmucik Ordnung',
     year: '2019',
     color: 'royalblue-100',
     flag: 'installation',

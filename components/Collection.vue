@@ -3,7 +3,9 @@
     class="w-full px-8 py-6 md:px-16 md:py-12 overflow-y-scroll bg-white text-gray-200"
   >
     <div class="flex justify-between items-center">
-      <p class="text-2xl uppercase" v-html="currentCollection.title"></p>
+      <p class="text-2xl uppercase mr-8 md:mr-0">
+        {{ currentCollection.title }}
+      </p>
       <p class="italic">{{ currentCollection.year }}</p>
       <!-- <p class="lowercase italic">{{ currentCollection.flag }}</p> -->
     </div>
@@ -53,7 +55,7 @@
             'mx-auto': img.align == 'center',
           }"
         >
-          <p v-if="img.title" v-html="img.title"></p>
+          <p v-if="img.title">{{ img.title }}</p>
           <p v-if="img.size">{{ img.size }}</p>
           <p v-if="img.material">{{ img.material }}</p>
           <p v-if="img.info">{{ img.info }}</p>
