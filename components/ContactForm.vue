@@ -74,7 +74,7 @@ export default {
         await fetch('/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: this.encode({ 'form-name': 'writeUs', ...this.form }),
+          body: this.encode({ 'form-name': 'contact', ...this.form }),
         })
         this.isSent = true
       } catch (error) {
