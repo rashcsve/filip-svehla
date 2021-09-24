@@ -15,7 +15,7 @@
       <div
         v-for="(item, ind) in data"
         :key="ind"
-        class="flex top-0 right-0 relative h-screen md:rounded-b-3xl"
+        class="flex top-0 right-0 relative md:rounded-b-3xl"
         :class="{
           'w-full': ind === index,
         }"
@@ -47,9 +47,9 @@
                 uppercase
                 md:text-2xl
                 select-none
-                fixed
                 flex
               "
+              :class="{ fixed: !notFixedTitle, absolute: notFixedTitle }"
             >
               {{ item.title }}
             </div>
@@ -123,48 +123,43 @@ export default {
   },
   data() {
     return {
-      onScroll: false,
+      notFixedTitle: false,
       index: 0,
       data: null,
     }
   },
-  computed: {
-    currentCollection() {
-      return this.data[Math.abs(this.index) % this.data.length]
-    },
-    otherCollection() {
-      return this.data.filter((col) => col.index !== this.index)
-    },
+  created() {
+    if (process.client) {
+      // eslint-disable-next-line nuxt/no-globals-in-created
+      window.addEventListener('scroll', this.handleScrolling)
+    }
   },
   mounted() {
-    window.addEventListener('scroll', this.handleScroll)
     this.data = paintings
     this.$store.commit('setColor', 'paintingOne')
     this.$store.commit('setAlign', 'left')
   },
   destroyed() {
-    window.removeEventListener('scroll', this.handleScroll)
+    window.removeEventListener('scroll', this.handleScrolling)
   },
   methods: {
-    getCurrentCollection(i) {
-      console.log(this.data[i])
-      return this.data[i]
-    },
-    handleScroll(e) {
-      if (window.scrollY !== 0) {
-        this.onScroll = true
-      } else {
-        this.onScroll = false
-      }
-    },
     setColor(index, flag) {
       const color = this.getColor(index, flag)
       this.$store.commit('setColor', color)
     },
     setIndex(ind) {
-      console.log('setting index')
       this.$store.commit('showImage', false)
       this.$store.commit('setIndex', ind)
+    },
+    handleScrolling() {
+      const documentHeight = document.body.scrollHeight
+      const screenHeight = window.screen.height
+      const currentScrollY = window.scrollY
+      if (documentHeight - (screenHeight + currentScrollY) <= 138) {
+        this.notFixedTitle = true
+      } else {
+        this.notFixedTitle = false
+      }
     },
   },
 }
