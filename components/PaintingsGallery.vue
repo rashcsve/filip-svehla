@@ -11,17 +11,17 @@
       overflow-hidden
     "
   >
-    <ul v-if="data" class="flex top-0 right-0 relative">
+    <ul v-if="data" class="flex p-0 m-0 flex-row">
       <div
         v-for="(item, ind) in data"
         :key="ind"
-        class="flex top-0 right-0 relative md:rounded-b-3xl"
+        class="flex top-0 right-0 relative md:rounded-b-3xl item"
         :class="{
           'w-full': ind === index,
         }"
       >
         <HorizontalCollapseItem :index="ind">
-          <template #inactive @click="setIndex(ind)">
+          <template #inactive>
             <div
               class="
                 hidden
@@ -132,6 +132,7 @@ export default {
     if (process.client) {
       // eslint-disable-next-line nuxt/no-globals-in-created
       window.addEventListener('scroll', this.handleScrolling)
+      this.setIndex(0)
     }
   },
   mounted() {
@@ -148,6 +149,7 @@ export default {
       this.$store.commit('setColor', color)
     },
     setIndex(ind) {
+      console.log('galee ', ind)
       this.$store.commit('showImage', false)
       this.$store.commit('setIndex', ind)
     },

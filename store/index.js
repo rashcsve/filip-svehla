@@ -13,8 +13,6 @@ export const getters = {
 
 export const mutations = {
   showImage(state, value) {
-    // eslint-disable-next-line no-console
-    console.log('showImage: ' + value)
     state.showImage = value
   },
   setIndex(state, index) {

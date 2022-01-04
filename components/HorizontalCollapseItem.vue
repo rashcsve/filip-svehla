@@ -78,9 +78,14 @@ export default {
       if (!this.showImage) {
         this.isActive = !this.isActive
       }
+      this.setIndex()
     },
     away() {
       this.isActive = false
+    },
+    setIndex() {
+      this.$store.commit('showImage', false)
+      this.$store.commit('setIndex', this.index)
     },
   },
 }
@@ -88,8 +93,6 @@ export default {
 
 <style>
 .item {
-  min-width: 10rem;
-  max-width: 40rem;
   transition: width 0.5s;
 }
 .inactive {
