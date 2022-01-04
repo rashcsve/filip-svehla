@@ -4,11 +4,13 @@ export const state = () => ({
   color: 0,
   align: null,
   footer: true,
+  name: null,
 })
 
 export const getters = {
   showImage: (state) => state.showImage,
   getIndex: (state) => state.index,
+  getName: (state) => state.name,
 }
 
 export const mutations = {
@@ -26,5 +28,8 @@ export const mutations = {
   },
   setFooter(state, value) {
     state.footer = value
+  },
+  setName(state, name) {
+    state.name = name
   },
 }

@@ -19,7 +19,14 @@
         <input
           id="email"
           v-model="form.email"
-          class="w-full bg-gray-100 mt-1 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+          class="
+            w-full
+            bg-gray-100
+            mt-1
+            p-3
+            rounded-lg
+            focus:outline-none focus:shadow-outline
+          "
           type="email"
           name="email"
           aria-label="Email address"
@@ -31,13 +38,31 @@
         <textarea
           v-model="form.message"
           name="message"
-          class="w-full h-32 bg-gray-100 mt-1 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+          class="
+            w-full
+            h-32
+            bg-gray-100
+            mt-1
+            p-3
+            rounded-lg
+            focus:outline-none focus:shadow-outline
+          "
           required
         ></textarea>
       </div>
       <div class="mt-4">
         <button
-          class="uppercase font-bold bg-turquoise-300 hover:bg-turquoise-600 hover:bg-gray-600 text-white p-3 rounded-lg w-full focus:outline-none focus:shadow-outline"
+          class="
+            uppercase
+            font-bold
+            bg-limegreen-500
+            hover:bg-limegreen-600 hover:bg-gray-600
+            text-white
+            p-3
+            rounded-lg
+            w-full
+            focus:outline-none focus:shadow-outline
+          "
           type="submit"
           value="Send message"
         >
