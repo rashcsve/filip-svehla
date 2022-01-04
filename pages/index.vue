@@ -1,24 +1,52 @@
 <template>
   <div class="bg-gray-100 w-full h-screen">
     <div
-      class="flex flex-col md:grid md:grid-cols-2 md:grid-rows-layout overflow-hidden w-full md:h-screen relative"
+      class="
+        flex flex-col
+        md:grid md:grid-cols-2 md:grid-rows-layout
+        overflow-hidden
+        w-full
+        md:h-screen
+        relative
+      "
     >
       <div class="hidden md:block overflow-hidden w-full box-slide-left-top">
         <div class="w-full bg-white h-leftTopTile tile"></div>
       </div>
       <div
-        class="col-start-2 col-end-2 row-start-1 row-end-3 w-full overflow-hidden box-slide-right-top"
+        class="
+          col-start-2 col-end-2
+          row-start-1 row-end-3
+          w-full
+          overflow-hidden
+          box-slide-right-top
+        "
       >
         <navbar-top class="navbar-top" />
       </div>
       <div class="flex md:hidden bg-sunglow-300 h-mobileHPBody"></div>
       <div
-        class="row-start-2 row-end-4 w-full overflow-hidden flex box-slide-left-bottom"
+        class="
+          row-start-2 row-end-4
+          w-full
+          overflow-hidden
+          flex
+          box-slide-left-bottom
+        "
       >
         <navbar-bottom class="navbar-bottom" />
       </div>
       <div
-        class="hidden md:flex h-full col-start-2 col-end-2 row-start-3 row-end-4 w-full overflow-hidden box-slide-right-bottom"
+        class="
+          hidden
+          md:flex
+          h-full
+          col-start-2 col-end-2
+          row-start-3 row-end-4
+          w-full
+          overflow-hidden
+          box-slide-right-bottom
+        "
       ></div>
       <nuxt-link to="/paintings">
         <h1 class="absolute text-4xl md:text-5xl title text-turquoise-600">

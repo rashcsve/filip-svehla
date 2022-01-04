@@ -1,7 +1,15 @@
 <template>
   <div>
     <nav
-      class="md:h-navbar flex justify-between items-center p-4 px-8 md:pl-16 md:pr-10"
+      class="
+        md:h-navbar
+        flex
+        justify-between
+        items-center
+        p-4
+        px-8
+        md:pl-16 md:pr-10
+      "
       :class="{
         'md:rounded-l-3xl': align === 'left',
         'md:rounded-r-3xl': align === 'right',
@@ -23,7 +31,16 @@
       </h1>
       <nav-links class="hidden md:flex" />
       <div
-        class="menu-icon block cursor-pointer md:hidden px-2 py-4 relative select-none"
+        class="
+          menu-icon
+          block
+          cursor-pointer
+          md:hidden
+          px-2
+          py-4
+          relative
+          select-none
+        "
         for="menu-btn"
         @click="showMenu = !showMenu"
       >
