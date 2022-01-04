@@ -5,11 +5,16 @@
     ;min-width: ${itemMinWidth}px;max-width: 100%`"
     class="p-0 relative list-none item"
     :class="{
-      'is-active': isActive,
+      'hover:opacity-75': !isActive,
+      'is-active hover:opacity-100': isActive,
       'bg-gray-100': getColor === 'paintingOne',
       'bg-gray-200': getColor === 'paintingTwo',
       'bg-gray-300': getColor === 'paintingThree',
       'bg-white': getColor === 'paintingFour',
+      'bg-sunglow-100': getColor === 'instalOne',
+      'bg-sunset-100': getColor === 'instalTwo',
+      'bg-royalblue-100': getColor === 'instalThree',
+      'bg-flamingo-100': getColor === 'instalFour',
     }"
     tabindex="0"
     role="button"
@@ -48,6 +53,9 @@ export default {
     }
   },
   computed: {
+    name() {
+      return this.$store.getters.getName
+    },
     activeItemWidth() {
       return this.innerWidth - 300 // 450 is 3 x 150
     },
@@ -55,14 +63,26 @@ export default {
       return this.$store.getters.showImage
     },
     getColor() {
-      if (this.index === 0) {
-        return 'paintingOne'
-      } else if (this.index === 1) {
-        return 'paintingTwo'
-      } else if (this.index === 2) {
-        return 'paintingThree'
-      } else if (this.index === 3) {
-        return 'paintingFour'
+      if (this.name.includes('painting')) {
+        if (this.index === 0) {
+          return 'paintingOne'
+        } else if (this.index === 1) {
+          return 'paintingTwo'
+        } else if (this.index === 2) {
+          return 'paintingThree'
+        } else if (this.index === 3) {
+          return 'paintingFour'
+        }
+      } else if (this.name.includes('installation')) {
+        if (this.index === 0) {
+          return 'instalOne'
+        } else if (this.index === 1) {
+          return 'instalTwo'
+        } else if (this.index === 2) {
+          return 'instalThree'
+        } else if (this.index === 3) {
+          return 'instalFour'
+        }
       }
       return ''
     },

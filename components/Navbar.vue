@@ -11,9 +11,6 @@
         md:pl-16 md:pr-10
       "
       :class="{
-        'md:rounded-l-3xl': align === 'left',
-        'md:rounded-r-3xl': align === 'right',
-        'md:rounded-none': align === 'center',
         'bg-gray-100': color == 'paintingOne',
         'bg-gray-200': color === 'paintingTwo',
         'bg-gray-300': color === 'paintingThree',
@@ -23,7 +20,7 @@
         'bg-royalblue-100': color === 'instalThree',
         'bg-flamingo-100': color === 'instalFour',
         'bg-sunglow-300': color === 'about',
-        'bg-chocolate-500': color === 'contact',
+        'bg-flamingo-400': color === 'contact',
       }"
     >
       <h1>
@@ -63,7 +60,7 @@
         'bg-royalblue-100': color === 'instalThree',
         'bg-flamingo-100': color === 'instalFour',
         'bg-sunglow-300': color === 'about',
-        'bg-chocolate-500': color === 'contact',
+        'bg-flamingo-400': color === 'contact',
       }"
     />
   </div>

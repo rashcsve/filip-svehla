@@ -32,7 +32,7 @@
                 items-center
                 md:mt-8
                 lowercase
-                w-full
+                w-fulle
               "
             >
               <p>{{ item.year }}</p>
@@ -101,9 +101,11 @@ export default {
     if (this.paintings) {
       this.data = paintings
       this.$store.commit('setColor', 'paintingOne')
+      this.$store.commit('setName', 'paintings')
     } else if (this.installations) {
       this.data = installations
-      this.$store.commit('setColor', 'installationOne')
+      this.$store.commit('setColor', 'instalOne')
+      this.$store.commit('setName', 'installations')
     }
     this.setIndex(0)
     this.$store.commit('setAlign', 'left')

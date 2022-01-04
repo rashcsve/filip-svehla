@@ -49,7 +49,7 @@
         "
       ></div>
       <nuxt-link to="/paintings">
-        <h1 class="absolute text-4xl md:text-5xl title text-turquoise-600">
+        <h1 class="absolute text-4xl md:text-5xl title">
           czech artist
           <div></div>
         </h1>
@@ -166,24 +166,24 @@ export default {
   background-color: #ffafdb;
 } */
 .box-slide-left-top {
-  background-color: #f17816;
+  background-color: #2ec4b6;
 }
 .box-slide-left-top .tile {
-  background-color: #67e5de;
+  background-color: #011627;
 }
 .box-slide-right-top {
-  background-color: #ffee24;
+  background-color: #fbff12;
 }
 .navbar-top {
-  background-color: #f17816;
+  background-color: #e71d36;
 }
 .box-slide-right-bottom {
-  background-color: #ffee24;
+  background-color: #fdfffc;
 }
 .box-slide-left-bottom {
-  background-color: #ffee24;
+  background-color: #fdfffc;
 }
 .navbar-bottom {
-  background-color: #67e5de;
+  background-color: #e71d36;
 }
 </style>
