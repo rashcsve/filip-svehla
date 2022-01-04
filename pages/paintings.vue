@@ -1,17 +1,17 @@
 <template>
   <div>
     <Navbar paintings />
-    <PaintingsGallery />
+    <Gallery paintings />
   </div>
 </template>
 
 <script>
 import Navbar from '../components/Navbar'
-import PaintingsGallery from '../components/PaintingsGallery'
+import Gallery from '../components/Gallery'
 export default {
   components: {
     Navbar,
-    PaintingsGallery,
+    Gallery,
   },
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar installations />
-    <Gallery />
+    <Gallery installations />
   </div>
 </template>
 
